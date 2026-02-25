@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Service 1: Our Weather API
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - REDIS_URL=redis://redis_cache:6379
+      - NODE_ENV=development
+    depends_on:
+      - redis_cache
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  # Service 2: The Redis Cache
+  redis_cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"

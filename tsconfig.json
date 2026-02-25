@@ -1,0 +1,66 @@
+/*{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
+}*/
+
+{
+  "compilerOptions": {
+    /* Base Options */
+    "target": "ES2022",                       /* Generate modern JS */
+    "module": "NodeNext",                     /* Use the modern Node.js module system */
+    "moduleResolution": "NodeNext",           /* strict NodeNext resolution */
+    "esModuleInterop": true,                  /* Allow importing CommonJS packages if needed */
+    "forceConsistentCasingInFileNames": true, /* Case sensitive file names (important for Ubuntu) */
+    "strict": true,                           /* Enable all strict type-checking options */
+    "skipLibCheck": true,                     /* Skip type checking of declaration files */
+    
+    /* Output Options */
+    "outDir": "./dist",                       /* Where compiled JS goes */
+    "rootDir": "./src",                       /* Where your TS files are */
+    
+    /* Path Handling */
+    "resolveJsonModule": true                 /* Allow importing .json files */
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
